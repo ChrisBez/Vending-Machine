@@ -29,6 +29,6 @@ const appRoutes: Routes = [
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent, CansService]
+  bootstrap: [AppComponent, [CansService]]
 })
 export class AppModule { }

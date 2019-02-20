@@ -10,6 +10,11 @@ export class CansService {
   private cans: Can[] = [];
 
   constructor() {
-    this.cans = CANS;
+    this.cans = Object.assign( {}, CANS);
    }
+
+  getCurrentStock(): Can[] {
+    
+    return Object.assign( {}, this.cans)
+  }
 }
