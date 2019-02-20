@@ -6,26 +6,25 @@ import { CANS } from './mock-cans';
   providedIn: 'root'
 })
 export class CansService {
-  
+
 
   private cans: Can[] = [];
 
   constructor() {
-    this.cans = Object.assign( {}, CANS);
+    Object.assign(this.cans, CANS);
    }
 
   getCurrentStock(): Can[] {
     //creating a new can array here so I can pass by value to the consumer
     let cans: Can[] = []
-    
+
     Object.assign( cans, this.cans)
 
     return cans;
   }
-  
+
   buyCan(selectedCan: number, paymentType: string): any {
     console.log("can purchased");
-    console.log(selectedCan);
-    console.log(paymentType);
+    this.cans.find(c => c.id === selectedCan).quantity--;
   }
 }
