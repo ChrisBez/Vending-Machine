@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Can } from '../cans/can';
 import { CansService } from '../cans/cans.service';
-import { refreshDescendantViews } from '@angular/core/src/render3/instructions';
-import { restoreView } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-user-view',
@@ -30,6 +28,7 @@ export class UserViewComponent implements OnInit {
   }
 
   resetView(){
+    //setting these values to the default will disable the purchase button in the html
     this.selectedCan = 0;
     this.paymentType = "";
   }

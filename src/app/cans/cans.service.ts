@@ -11,11 +11,11 @@ export class CansService {
   private cans: Can[] = [];
 
   constructor() {
-    Object.assign(this.cans, CANS);
+    Object.assign(this.cans, CANS);  
    }
 
   getCurrentStock(): Can[] {
-    //creating a new can array here so I can pass by value to the consumer
+    //creating a new can array here so I can pass by value to the service consumer
     let cans: Can[] = []
 
     Object.assign( cans, this.cans)
