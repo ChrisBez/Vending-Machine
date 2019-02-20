@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MatButtonModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonToggleModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatToolbarModule, MatRadioModule, MatListModule, MatButtonToggleModule, MatRadioButton} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { CansService } from './cans/cans.service';
@@ -23,11 +24,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatRadioModule
   ],
   providers: [CansService],
   bootstrap: [AppComponent]

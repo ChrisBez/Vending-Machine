@@ -1,0 +1,15 @@
+.user-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.can-group {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+.can-button {
+    margin: 5px;
+    font-size: 2em;
+}

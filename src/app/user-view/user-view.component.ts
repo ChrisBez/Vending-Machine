@@ -9,7 +9,9 @@ import { CansService } from '../cans/cans.service';
 })
 export class UserViewComponent implements OnInit {
 
-  canView: Can[] = [];
+  private canView: Can[] = [];
+
+  private selectedCans: number;
 
   constructor(private canService: CansService) { }
 
