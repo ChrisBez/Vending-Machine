@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MatButtonModule, MatCardModule, MatToolbarModule, MatRadioModule, MatListModule, MatButtonToggleModule, MatRadioButton} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatToolbarModule, MatRadioModule, MatListModule, MatButtonToggleModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -30,7 +30,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatButtonModule,
     MatListModule,
-    MatRadioModule
+    MatRadioModule,
+    MatButtonToggleModule
   ],
   providers: [CansService],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { CANS } from './mock-cans';
   providedIn: 'root'
 })
 export class CansService {
+  
 
   private cans: Can[] = [];
 
@@ -20,5 +21,11 @@ export class CansService {
     Object.assign( cans, this.cans)
 
     return cans;
+  }
+  
+  buyCan(selectedCan: number, paymentType: string): any {
+    console.log("can purchased");
+    console.log(selectedCan);
+    console.log(paymentType);
   }
 }

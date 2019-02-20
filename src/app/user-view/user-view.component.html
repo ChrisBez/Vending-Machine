@@ -7,4 +7,13 @@
         </mat-radio-button>
       </ng-container>
     </mat-radio-group>
+    <mat-button-toggle-group class="payment-group" [(ngModel)]="paymentType">
+      <mat-button-toggle value = "cash">
+        Cash
+      </mat-button-toggle>
+      <mat-button-toggle value = "card">
+        Card
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <button class="purchase-button" mat-raised-button color="primary" (click)="purchaseCan()">Purchase</button>
   </div>

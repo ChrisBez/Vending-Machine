@@ -11,11 +11,18 @@ export class UserViewComponent implements OnInit {
 
   private canView: Can[] = [];
 
-  private selectedCans: number;
+  private selectedCan: number;
+
+  private paymentType: string;
 
   constructor(private canService: CansService) { }
 
   ngOnInit() {
+    this.canView = this.canService.getCurrentStock()
+  }
+
+  purchaseCan() {
+    this.canService.buyCan(this.selectedCan, this.paymentType)
     this.canView = this.canService.getCurrentStock()
   }
 
