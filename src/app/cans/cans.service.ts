@@ -27,4 +27,5 @@ export class CansService {
     console.log("can purchased");
     this.cans.find(c => c.id === selectedCan).quantity--;
   }
+
 }
