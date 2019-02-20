@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
+import { CansService } from './cans/cans.service';
 
 const appRoutes: Routes = [
   { path: 'user', component: UserViewComponent },
@@ -28,6 +29,6 @@ const appRoutes: Routes = [
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, CansService]
 })
 export class AppModule { }
