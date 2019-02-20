@@ -13,10 +13,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'Vending-Machine'`, async(() => {
+  it(`should have as title 'Vending Machine'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Vending-Machine');
+    expect(app.title).toEqual('Vending Machine');
   }));
   it('should render title in a span tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
