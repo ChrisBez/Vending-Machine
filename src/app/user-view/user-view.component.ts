@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Can } from '../cans/can';
+import { CansService } from '../cans/cans.service';
 
 @Component({
   selector: 'app-user-view',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserViewComponent implements OnInit {
 
-  constructor() { }
+  canView: Can[];
+
+  constructor(private canService: CansService) { }
 
   ngOnInit() {
+    this.canView = this.canService.getCurrentStock()
   }
 
 }
