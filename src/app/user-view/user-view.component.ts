@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Can } from '../cans/can';
 import { CansService } from '../cans/cans.service';
+import { refreshDescendantViews } from '@angular/core/src/render3/instructions';
+import { restoreView } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-user-view',
@@ -11,19 +13,25 @@ export class UserViewComponent implements OnInit {
 
   private canView: Can[] = [];
 
-  private selectedCan: number;
+  private selectedCan: number = 0;
 
-  private paymentType: string;
+  private paymentType: string = "";
 
   constructor(private canService: CansService) { }
 
   ngOnInit() {
-    this.canView = this.canService.getCurrentStock()
+    this.canView = this.canService.getCurrentStock();
   }
 
   purchaseCan() {
-    this.canService.buyCan(this.selectedCan, this.paymentType)
-    this.canView = this.canService.getCurrentStock()
+    this.canService.buyCan(this.selectedCan, this.paymentType);
+    this.canView = this.canService.getCurrentStock();
+    this.resetView();
+  }
+
+  resetView(){
+    this.selectedCan = 0;
+    this.paymentType = "";
   }
 
 }

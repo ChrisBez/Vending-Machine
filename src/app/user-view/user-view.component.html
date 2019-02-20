@@ -15,5 +15,6 @@
         Card
       </mat-button-toggle>
     </mat-button-toggle-group>
-    <button class="purchase-button" mat-raised-button color="primary" (click)="purchaseCan()">Purchase</button>
+    <button class="purchase-button" mat-raised-button color="primary" 
+      (click)="purchaseCan()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
   </div>
