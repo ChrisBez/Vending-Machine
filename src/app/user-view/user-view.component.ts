@@ -9,7 +9,7 @@ import { CansService } from '../cans/cans.service';
 })
 export class UserViewComponent implements OnInit {
 
-  canView: Can[];
+  canView: Can[] = [];
 
   constructor(private canService: CansService) { }
 

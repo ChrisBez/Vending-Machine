@@ -26,7 +26,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   providers: [CansService],
   bootstrap: [AppComponent]

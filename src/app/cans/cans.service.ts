@@ -14,7 +14,11 @@ export class CansService {
    }
 
   getCurrentStock(): Can[] {
+    //creating a new can array here so I can pass by value to the consumer
+    let cans: Can[] = []
     
-    return Object.assign( {}, this.cans)
+    Object.assign( cans, this.cans)
+
+    return cans;
   }
 }
