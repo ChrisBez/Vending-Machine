@@ -60,7 +60,6 @@ describe('RepositoryService', () => {
 
   it('repository service should get a can and log a card payment when card payment is made ', () => {
 
-    const basetime = new Date(2010, 1, 1);
     jasmine.clock().mockDate(new Date(2010, 1, 1));
 
     canService.restockCans([{id: 1, name: "TestOne", price: 3, quantity: 5}]);
