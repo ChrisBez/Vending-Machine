@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { CardPaymentsService } from './card-payments.service';
-import { cardPayment } from '../interfaces/card-payment';
+import { CardPayment } from '../interfaces/card-payment';
 
 describe('CardPaymentsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
@@ -12,7 +12,7 @@ describe('CardPaymentsService', () => {
   });
 
   it('should store and retrieve the correct payment history', () => {
-    const expectedOutput: cardPayment[] = [
+    const expectedOutput: CardPayment[] = [
       { paymentTime: new Date("2010-01-01"), amount: 1 },
       { paymentTime: new Date("2011-01-01"), amount: 2 },
       { paymentTime: new Date("2012-01-01"), amount: 3 }

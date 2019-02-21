@@ -1,0 +1,27 @@
+.user-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.can-group {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+.can-button {
+    margin: 5px;
+    font-size: 2em;
+}
+
+.payment-group {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.purchase-button {
+    font-size: 2em;
+    margin-top: 20px;
+}

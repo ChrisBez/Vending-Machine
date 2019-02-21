@@ -1,4 +1,4 @@
-export class cardPayment {
+export class CardPayment {
     paymentTime: Date;
     amount: number;
 }

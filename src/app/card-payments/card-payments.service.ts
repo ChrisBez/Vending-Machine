@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
-import { cardPayment } from '../interfaces/card-payment';
+import { CardPayment } from '../interfaces/card-payment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardPaymentsService {
 
-  private payments: cardPayment[] = [];
+  private payments: CardPayment[] = [];
 
   constructor() { }
 
-  cardPayment(newPayment: cardPayment) {
+  cardPayment(newPayment: CardPayment) {
     this.payments.push(newPayment);
     console.log(this.cardPaymentTotal());
   }
 
-  paymentLog(): cardPayment[] {
+  paymentLog(): CardPayment[] {
     return [...this.payments];
   }
 

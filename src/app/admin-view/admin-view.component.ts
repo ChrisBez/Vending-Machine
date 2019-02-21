@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Can } from '../interfaces/can';
+import { RepositoryService } from '../repository/repository.service';
+import { CardPayment } from '../interfaces/card-payment';
 
 @Component({
   selector: 'app-admin-view',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminViewComponent implements OnInit {
 
-  constructor() { }
+  private canView: Can[] = [];
+  private cardLog: CardPayment;
+  private currentCashHeld: number;
+
+  constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
+    this.canView = this.repoService.getStock();
   }
 
 }

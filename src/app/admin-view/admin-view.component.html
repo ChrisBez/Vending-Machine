@@ -1,3 +1,19 @@
-<p>
-  admin-view works!
-</p>
+<div class="user-content">
+  <mat-radio-group class="can-group" [(ngModel)]="selectedCan">
+    <ng-container  *ngFor="let can of canView">
+      <mat-radio-button class="can-button" [value]="can.id" *ngIf="can.quantity > 0" >
+        {{can.quantity}} X {{can.name}}:  {{can.price | currency}}
+      </mat-radio-button>
+    </ng-container>
+  </mat-radio-group>
+  <mat-button-toggle-group class="payment-group" [(ngModel)]="paymentType">
+    <mat-button-toggle value = "cash">
+      Cash
+    </mat-button-toggle>
+    <mat-button-toggle value = "card">
+      Card
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <button class="purchase-button" mat-raised-button color="primary" 
+    (click)="purchaseCan()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
+</div>
