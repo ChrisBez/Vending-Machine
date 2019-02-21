@@ -12,7 +12,7 @@ export class CardPaymentsService {
 
   cardPayment(newPayment: cardPayment) {
     this.payments.push(newPayment);
-    console.log(this.payments);
+    console.log(this.cardPaymentTotal());
   }
 
   paymentLog(): cardPayment[] {
@@ -20,6 +20,11 @@ export class CardPaymentsService {
   }
 
   cardPaymentTotal(): number {
-    return this.payments.reduce((sum, current) => sum + current.amount, 0);
+    const x = this.payments.reduce((sum, current) => sum + current.amount, 0);
+
+    console.log(x);
+
+    return x;
+
   }
 }

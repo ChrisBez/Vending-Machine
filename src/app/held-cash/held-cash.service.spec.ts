@@ -9,4 +9,20 @@ describe('HeldCashService', () => {
     const service: HeldCashService = TestBed.get(HeldCashService);
     expect(service).toBeTruthy();
   });
+
+  it('should be hold $0 on creation', () => {
+    const service: HeldCashService = TestBed.get(HeldCashService);
+    expect(service.heldCash).toEqual(0);
+  });
+
+  it('should return the total of all cash payment made', () => {
+    const service: HeldCashService = TestBed.get(HeldCashService);
+
+    service.cashPayment(1);
+    service.cashPayment(2);
+
+    expect(service.heldCash).toEqual(3);
+  });
+
+
 });
