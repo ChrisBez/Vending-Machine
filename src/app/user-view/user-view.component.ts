@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Can } from '../cans/can';
-import { CansService } from '../cans/cans.service';
+import { RepositoryService } from '../repository/repository.service';
 
 @Component({
   selector: 'app-user-view',
@@ -15,15 +15,15 @@ export class UserViewComponent implements OnInit {
 
   private paymentType: string = "";
 
-  constructor(private canService: CansService) { }
+  constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
-    this.canView = this.canService.getCurrentStock();
+    this.canView = this.repoService.getStock();
   }
 
   purchaseCan() {
-    this.canService.buyCan(this.selectedCan, this.paymentType);
-    this.canView = this.canService.getCurrentStock();
+    this.repoService.buyCan(this.selectedCan, this.paymentType);
+    this.canView = this.repoService.getStock();
     this.resetView();
   }
 

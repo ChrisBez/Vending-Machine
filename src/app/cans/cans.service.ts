@@ -18,9 +18,13 @@ export class CansService {
     return [...this.cans];
   }
 
-  buyCan(selectedCan: number, paymentType: string): any {
+  dispenseCan(canId: number) {
     console.log("can purchased");
-    this.cans.find(c => c.id === selectedCan).quantity--;
+    this.cans.find(c => c.id === canId).quantity--;
+  }
+
+  getPriceOfCan(canId: number): number {
+    return this.cans.find(c => c.id === canId).price;
   }
 
 }

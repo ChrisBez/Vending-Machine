@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { CansService } from './cans/cans.service';
+import { HeldCashService } from './held-cash/held-cash.service';
+import { RepositoryService } from './repository/repository.service';
 
 const appRoutes: Routes = [
   { path: 'user', component: UserViewComponent },
@@ -33,7 +35,7 @@ const appRoutes: Routes = [
     MatRadioModule,
     MatButtonToggleModule
   ],
-  providers: [CansService],
+  providers: [CansService, HeldCashService, RepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
