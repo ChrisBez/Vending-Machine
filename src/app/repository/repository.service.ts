@@ -20,7 +20,7 @@ export class RepositoryService {
     const canCost = this.canService.getPriceOfCan(canId);
 
     if(paymentType === 'cash') {
-      this.heldCashService.cashpayment(canCost);
+      this.heldCashService.cashPayment(canCost);
     }
 
   }

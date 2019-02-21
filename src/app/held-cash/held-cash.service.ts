@@ -13,7 +13,7 @@ export class HeldCashService {
     return this._heldCash;
   }
 
-  cashpayment(purchasePrice: number) {
+  cashPayment(purchasePrice: number) {
     this._heldCash += purchasePrice;
   }
 
