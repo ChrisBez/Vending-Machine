@@ -5,15 +5,15 @@
         {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
       </mat-list-item>
     </ng-container>
-  </mat-list>
-  <mat-button-toggle-group class="payment-group" [(ngModel)]="paymentType">
-    <mat-button-toggle value = "cash">
-      Cash
-    </mat-button-toggle>
-    <mat-button-toggle value = "card">
-      Card
-    </mat-button-toggle>
-  </mat-button-toggle-group>
+  </mat-list>  
+
+  <mat-card class="current-cash">
+      <mat-card-title>Current Cash in Machine</mat-card-title>
+      <mat-card-content>
+        <span class="current-cash-content">{{currentCashHeld | currency}}</span>
+      </mat-card-content>
+  </mat-card>
   <button class="restock-button" mat-raised-button color="primary" 
-    (click)="onRestockClick()">Restock</button>
+    (click)="onRestockClick()">Restock
+  </button>
 </div>

@@ -18,15 +18,19 @@ export class AdminViewComponent implements OnInit {
   constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
+    this.refreshView();
+  }
+
+  onRestockClick() {
+    this.repoService.restock();
+    this.refreshView();
+  }
+
+  refreshView() {
     this.canView = this.repoService.getStock();
     this.cardLog = this.repoService.getCardPaymentLog();
     this.cardTotal = this.repoService.getCardPaymentTotal();
     this.currentCashHeld = this.repoService.getHeldCash();
-  }
-
-  onRestockClick() {
-    this.repoService.restockCans();
-    this.canView = this.repoService.getStock();
   }
 
 }

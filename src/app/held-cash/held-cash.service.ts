@@ -17,4 +17,8 @@ export class HeldCashService {
     this._heldCash += purchasePrice;
   }
 
+  emptyCash() {
+    this._heldCash = 0;
+  }
+
 }

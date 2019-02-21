@@ -34,7 +34,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatListModule,
     MatRadioModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule
   ],
   providers: [CansService, HeldCashService, RepositoryService, CardPaymentsService],
   bootstrap: [AppComponent]

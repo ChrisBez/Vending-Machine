@@ -15,9 +15,12 @@
     font-size: 2em;
 }
 
-.payment-group {
-    font-size: 2em;
+.current-cash {
     margin-top: 20px;
+}
+.current-cash-content {
+    margin-top: 20px;
+    font-size: 2em;
 }
 
 .restock-button {
