@@ -11,6 +11,7 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
 import { CansService } from './cans/cans.service';
 import { HeldCashService } from './held-cash/held-cash.service';
 import { RepositoryService } from './repository/repository.service';
+import { CardPaymentsService } from './card-payments/card-payments.service';
 
 const appRoutes: Routes = [
   { path: 'user', component: UserViewComponent },
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
     MatRadioModule,
     MatButtonToggleModule
   ],
-  providers: [CansService, HeldCashService, RepositoryService],
+  providers: [CansService, HeldCashService, RepositoryService, CardPaymentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
