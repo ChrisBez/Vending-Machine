@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HeldCashService } from '../held-cash/held-cash.service';
 import { CansService } from '../cans/cans.service';
-import { Can } from '../cans/can';
+import { Can } from '../interfaces/can';
 
 @Injectable({
   providedIn: 'root'

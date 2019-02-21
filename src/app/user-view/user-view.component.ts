@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Can } from '../cans/can';
+import { Can } from '../interfaces/can';
 import { RepositoryService } from '../repository/repository.service';
 
 @Component({

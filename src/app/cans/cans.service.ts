@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Can } from './can';
+import { Can } from '../interfaces/can';
 import { CANS } from './mock-cans';
 
 @Injectable({
@@ -25,6 +25,10 @@ export class CansService {
 
   getPriceOfCan(canId: number): number {
     return this.cans.find(c => c.id === canId).price;
+  }
+
+  restockCans(newStock: Can[]) {
+    this.cans = newStock;
   }
 
 }
