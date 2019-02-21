@@ -11,13 +11,17 @@ import { CardPayment } from '../interfaces/card-payment';
 export class AdminViewComponent implements OnInit {
 
   private canView: Can[] = [];
-  private cardLog: CardPayment;
-  private currentCashHeld: number;
+  private cardLog: CardPayment[] = [];
+  private cardTotal: number = 0;
+  private currentCashHeld: number = 0;
 
   constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
     this.canView = this.repoService.getStock();
+    this.cardLog = this.repoService.getCardPaymentLog();
+    this.cardTotal = this.repoService.getCardPaymentTotal();
+    this.currentCashHeld = this.repoService.getHeldCash();
   }
 
 }

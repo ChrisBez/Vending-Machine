@@ -31,8 +31,18 @@ export class RepositoryService {
 
       this.cardPaymentService.cardPayment(newPayment);
     }
-
   }
 
+  getCardPaymentLog(): CardPayment[] {
+      return this.cardPaymentService.paymentLog();
+  }
+
+  getCardPaymentTotal(): number {
+    return this.cardPaymentService.cardPaymentTotal();
+  }
+
+  getHeldCash(): number {
+    return this.heldCashService.heldCash;
+  }
 
 }
