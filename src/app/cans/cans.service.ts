@@ -11,11 +11,11 @@ export class CansService {
   private cans: Can[] = [];
 
   constructor() {
-    this.cans = [...CANS];  
+    this.cans = JSON.parse(JSON.stringify(CANS));  
    }
 
   getCurrentStock(): Can[] {
-    return [...this.cans];
+    return JSON.parse(JSON.stringify(this.cans));
   }
 
   dispenseCan(canId: number) {
@@ -32,8 +32,7 @@ export class CansService {
   }
 
   restockCansWithMockData() {
-    this.cans = [...CANS]; 
-    console.log(CANS)
+    this.cans = JSON.parse(JSON.stringify(CANS)); 
   }
 
 }
