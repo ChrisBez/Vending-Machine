@@ -1,11 +1,11 @@
 <div class="user-content">
-  <mat-radio-group class="can-group" [(ngModel)]="selectedCan">
+  <mat-list class="can-list">
     <ng-container  *ngFor="let can of canView">
-      <mat-radio-button class="can-button" [value]="can.id" *ngIf="can.quantity > 0" >
-        {{can.quantity}} X {{can.name}}:  {{can.price | currency}}
-      </mat-radio-button>
+      <mat-list-item class="can-item" >
+        {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
+      </mat-list-item>
     </ng-container>
-  </mat-radio-group>
+  </mat-list>
   <mat-button-toggle-group class="payment-group" [(ngModel)]="paymentType">
     <mat-button-toggle value = "cash">
       Cash
@@ -14,6 +14,6 @@
       Card
     </mat-button-toggle>
   </mat-button-toggle-group>
-  <button class="purchase-button" mat-raised-button color="primary" 
-    (click)="purchaseCan()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
+  <button class="restock-button" mat-raised-button color="primary" 
+    (click)="onRestockClick()">Restock</button>
 </div>

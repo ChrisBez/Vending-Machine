@@ -5,14 +5,13 @@
     flex-direction: column;
 }
 
-.can-group {
+.can-list {
     display: inline-flex;
     flex-direction: column;
     margin: 5px;
   }
 
-.can-button {
-    margin: 5px;
+.can-item {
     font-size: 2em;
 }
 
@@ -21,7 +20,7 @@
     margin-top: 20px;
 }
 
-.purchase-button {
+.restock-button {
     font-size: 2em;
     margin-top: 20px;
 }

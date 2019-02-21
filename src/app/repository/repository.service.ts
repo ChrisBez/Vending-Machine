@@ -45,4 +45,8 @@ export class RepositoryService {
     return this.heldCashService.heldCash;
   }
 
+  restockCans() {
+    this.canService.restockCansWithMockData();
+  }
+
 }

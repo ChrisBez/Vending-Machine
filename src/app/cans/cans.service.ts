@@ -31,4 +31,9 @@ export class CansService {
     this.cans = newStock;
   }
 
+  restockCansWithMockData() {
+    this.cans = [...CANS]; 
+    console.log(CANS)
+  }
+
 }

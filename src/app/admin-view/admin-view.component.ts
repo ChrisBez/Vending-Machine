@@ -24,4 +24,9 @@ export class AdminViewComponent implements OnInit {
     this.currentCashHeld = this.repoService.getHeldCash();
   }
 
+  onRestockClick() {
+    this.repoService.restockCans();
+    this.canView = this.repoService.getStock();
+  }
+
 }

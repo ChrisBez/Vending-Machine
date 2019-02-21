@@ -3,7 +3,7 @@
     <mat-radio-group class="can-group" [(ngModel)]="selectedCan">
       <ng-container  *ngFor="let can of canView">
         <mat-radio-button class="can-button" [value]="can.id" *ngIf="can.quantity > 0" >
-          {{can.quantity}} X {{can.name}}:  {{can.price | currency}}
+          {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
         </mat-radio-button>
       </ng-container>
     </mat-radio-group>
