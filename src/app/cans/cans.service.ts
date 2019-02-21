@@ -11,16 +11,11 @@ export class CansService {
   private cans: Can[] = [];
 
   constructor() {
-    Object.assign(this.cans, CANS);  
+    this.cans = [...CANS];  
    }
 
   getCurrentStock(): Can[] {
-    //creating a new can array here so I can pass by value to the service consumer
-    let cans: Can[] = []
-
-    Object.assign( cans, this.cans)
-
-    return cans;
+    return [...this.cans];
   }
 
   buyCan(selectedCan: number, paymentType: string): any {
