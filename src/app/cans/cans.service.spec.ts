@@ -22,25 +22,25 @@ describe('CansService', () => {
     const service: CansService = TestBed.get(CansService);
 
     const initialCans: Can[] = [
-      {id: 1, name: "Soda Water", price: 1.50, quantity: 5},
-      {id: 2, name: "Lemonade", price: 1.50, quantity: 5},
-      {id: 3, name: "Cola", price: 1.50, quantity: 5},
-      {id: 4, name: "Orange Juice", price: 1.50, quantity: 5},
-      {id: 5, name: "Water", price: 1.50, quantity: 0},
-      {id: 6, name: "Diet Cola", price: 1.50, quantity: 5},
-      {id: 7, name: "Ginger Ale", price: 1.50, quantity: 5},
-      {id: 8, name: "Ginger Beer", price: 1.50, quantity: 5},
+      {id: 1, flavour: "Soda Water", price: 1.50, quantity: 5},
+      {id: 2, flavour: "Lemonade", price: 1.50, quantity: 5},
+      {id: 3, flavour: "Cola", price: 1.50, quantity: 5},
+      {id: 4, flavour: "Orange Juice", price: 1.50, quantity: 5},
+      {id: 5, flavour: "Water", price: 1.50, quantity: 0},
+      {id: 6, flavour: "Diet Cola", price: 1.50, quantity: 5},
+      {id: 7, flavour: "Ginger Ale", price: 1.50, quantity: 5},
+      {id: 8, flavour: "Ginger Beer", price: 1.50, quantity: 5},
     ]
 
     const finalCans: Can[] = [
-      {id: 1, name: "Soda Water", price: 1.50, quantity: 5},
-      {id: 2, name: "Lemonade", price: 1.50, quantity: 4},
-      {id: 3, name: "Cola", price: 1.50, quantity: 5},
-      {id: 4, name: "Orange Juice", price: 1.50, quantity: 5},
-      {id: 5, name: "Water", price: 1.50, quantity: 0},
-      {id: 6, name: "Diet Cola", price: 1.50, quantity: 5},
-      {id: 7, name: "Ginger Ale", price: 1.50, quantity: 5},
-      {id: 8, name: "Ginger Beer", price: 1.50, quantity: 5},
+      {id: 1, flavour: "Soda Water", price: 1.50, quantity: 5},
+      {id: 2, flavour: "Lemonade", price: 1.50, quantity: 4},
+      {id: 3, flavour: "Cola", price: 1.50, quantity: 5},
+      {id: 4, flavour: "Orange Juice", price: 1.50, quantity: 5},
+      {id: 5, flavour: "Water", price: 1.50, quantity: 0},
+      {id: 6, flavour: "Diet Cola", price: 1.50, quantity: 5},
+      {id: 7, flavour: "Ginger Ale", price: 1.50, quantity: 5},
+      {id: 8, flavour: "Ginger Beer", price: 1.50, quantity: 5},
     ]
 
     service.restockCans(initialCans);

@@ -1,6 +1,6 @@
 export class Can {
     id: number;
-    name: string;
+    flavour: string;
     price: number;
     quantity: number;
 }
