@@ -4,7 +4,7 @@ import { UserViewComponent } from './user-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule, MatCardModule } from '@angular/material';
 
 describe('UserViewComponent', () => {
   let component: UserViewComponent;
@@ -20,7 +20,8 @@ describe('UserViewComponent', () => {
         MatButtonModule,
         MatListModule,
         MatRadioModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatCardModule
       ]
     })
     .compileComponents();

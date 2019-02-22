@@ -31,7 +31,7 @@ describe('RepositoryService', () => {
     expect(serviceUnderTest).toBeTruthy();
   });
 
-  it('repository service should pass through stock from cans service', () => {
+  it('should pass through stock from cans service', () => {
 
     const expectedCans: Can[] = [
       {id: 1, flavour: 'TestOne', price: .90, quantity: 5},
@@ -43,7 +43,7 @@ describe('RepositoryService', () => {
     expect(serviceUnderTest.getStock()).toEqual(expectedCans);
   });
 
-  it('repository service should get a can and add to cash when cash payment is made ', () => {
+  it('should get a can and add to cash when cash payment is made ', () => {
 
     canService.restockCans([{id: 1, flavour: 'TestOne', price: 3, quantity: 5}]);
 
@@ -56,7 +56,7 @@ describe('RepositoryService', () => {
     expect(cashService.cashPayment).toHaveBeenCalledWith(3);
   });
 
-  it('repository service should get a can and log a card payment when card payment is made ', () => {
+  it('should get a can and log a card payment when card payment is made ', () => {
 
     jasmine.clock().mockDate(new Date(2010, 1, 1));
 

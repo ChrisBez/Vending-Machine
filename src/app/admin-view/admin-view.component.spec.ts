@@ -4,7 +4,7 @@ import { AdminViewComponent } from './admin-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule } from '@angular/material';
+import { MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule, MatCardModule } from '@angular/material';
 
 describe('AdminViewComponent', () => {
   let component: AdminViewComponent;
@@ -20,7 +20,8 @@ describe('AdminViewComponent', () => {
         MatButtonModule,
         MatListModule,
         MatRadioModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatCardModule
       ]
     })
     .compileComponents();

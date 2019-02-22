@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatListModule, MatRadioModule, MatButtonToggleModule, MatCardModule } from '@angular/material';
 import { UserViewComponent } from './user-view/user-view.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -30,7 +30,8 @@ describe('AppComponent', () => {
         MatButtonModule,
         MatListModule,
         MatRadioModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatCardModule
       ]
     }).compileComponents();
   }));
