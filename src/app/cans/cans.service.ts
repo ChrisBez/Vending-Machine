@@ -11,7 +11,7 @@ export class CansService {
   private cans: Can[] = [];
 
   constructor() {
-    this.cans = JSON.parse(JSON.stringify(CANS));  
+    this.cans = JSON.parse(JSON.stringify(CANS));
    }
 
   getCurrentStock(): Can[] {
@@ -19,7 +19,7 @@ export class CansService {
   }
 
   dispenseCan(canId: number) {
-    console.log("can purchased");
+    console.log('can purchased');
     this.cans.find(c => c.id === canId).quantity--;
   }
 
@@ -32,7 +32,7 @@ export class CansService {
   }
 
   restockCansWithMockData() {
-    this.cans = JSON.parse(JSON.stringify(CANS)); 
+    this.cans = JSON.parse(JSON.stringify(CANS));
   }
 
 }

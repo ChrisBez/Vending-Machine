@@ -13,8 +13,6 @@ describe('RepositoryService', () => {
   let cashService: HeldCashService;
 
   let serviceUnderTest: RepositoryService;
-  
-  let spy: any;  
 
   beforeEach(() => {
   TestBed.configureTestingModule({
@@ -36,8 +34,8 @@ describe('RepositoryService', () => {
   it('repository service should pass through stock from cans service', () => {
 
     const expectedCans: Can[] = [
-      {id: 1, flavour: "TestOne", price: .90, quantity: 5},
-      {id: 2, flavour: "TestTwo", price: 1.50, quantity: 5}
+      {id: 1, flavour: 'TestOne', price: .90, quantity: 5},
+      {id: 2, flavour: 'TestTwo', price: 1.50, quantity: 5}
     ];
 
     spyOn(canService, 'getCurrentStock').and.returnValue(expectedCans);
@@ -47,7 +45,7 @@ describe('RepositoryService', () => {
 
   it('repository service should get a can and add to cash when cash payment is made ', () => {
 
-    canService.restockCans([{id: 1, flavour: "TestOne", price: 3, quantity: 5}]);
+    canService.restockCans([{id: 1, flavour: 'TestOne', price: 3, quantity: 5}]);
 
     spyOn(canService, 'dispenseCan').and.callThrough();
     spyOn(cashService, 'cashPayment').and.callThrough();
@@ -62,7 +60,7 @@ describe('RepositoryService', () => {
 
     jasmine.clock().mockDate(new Date(2010, 1, 1));
 
-    canService.restockCans([{id: 1, flavour: "TestOne", price: 3, quantity: 5}]);
+    canService.restockCans([{id: 1, flavour: 'TestOne', price: 3, quantity: 5}]);
 
     spyOn(canService, 'dispenseCan').and.callThrough();
     spyOn(cardService, 'cardPayment').and.callThrough();

@@ -10,10 +10,10 @@ import { CardPayment } from '../interfaces/card-payment';
 })
 export class AdminViewComponent implements OnInit {
 
-  private canView: Can[] = [];
-  private cardLog: CardPayment[] = [];
-  private cardTotal: number = 0;
-  private currentCashHeld: number = 0;
+  canView: Can[] = [];
+  cardLog: CardPayment[] = [];
+  cardTotal = 0;
+  currentCashHeld = 0;
 
   constructor(private repoService: RepositoryService) { }
 

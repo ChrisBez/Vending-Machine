@@ -10,7 +10,7 @@ import { CardPayment } from '../interfaces/card-payment';
 })
 export class RepositoryService {
 
-  constructor(private canService: CansService, private heldCashService: HeldCashService, private cardPaymentService:CardPaymentsService) { }
+  constructor(private canService: CansService, private heldCashService: HeldCashService, private cardPaymentService: CardPaymentsService) {}
 
   getStock(): Can[] {
     return this.canService.getCurrentStock();

@@ -9,11 +9,11 @@ import { RepositoryService } from '../repository/repository.service';
 })
 export class UserViewComponent implements OnInit {
 
-  private canView: Can[] = [];
+  canView: Can[] = [];
 
-  private selectedCan: number = 0;
+  selectedCan = 0;
 
-  private paymentType: string = "";
+  paymentType = '';
 
   constructor(private repoService: RepositoryService) { }
 
@@ -27,10 +27,10 @@ export class UserViewComponent implements OnInit {
     this.resetView();
   }
 
-  resetView(){
-    //setting these values to the default will disable the purchase button in the html
+  resetView() {
+    // setting these values to the default will disable the purchase button in the html
     this.selectedCan = 0;
-    this.paymentType = "";
+    this.paymentType = '';
   }
 
 }

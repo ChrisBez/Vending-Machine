@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class HeldCashService {
 
-  private _heldCash: number = 0;
+  private _heldCash = 0;
 
   constructor() { }
 
