@@ -18,9 +18,19 @@
 .current-cash {
     margin-top: 20px;
 }
-.current-cash-content {
-    margin-top: 20px;
-    font-size: 2em;
+
+.card-details {
+  margin-top: 20px;
+}
+
+.details-content {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.card-history-title {
+  margin-top: 20px;
+  font-size: 1.5em;
 }
 
 .restock-button {

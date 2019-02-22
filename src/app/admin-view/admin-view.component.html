@@ -1,19 +1,35 @@
 <div class="user-content">
   <mat-list class="can-list">
-    <ng-container  *ngFor="let can of canView">
-      <mat-list-item class="can-item" >
-        {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
-      </mat-list-item>
-    </ng-container>
-  </mat-list>  
+    <mat-list-item class="can-item" *ngFor="let can of canView">
+      {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
+    </mat-list-item>
+  </mat-list>
 
   <mat-card class="current-cash">
       <mat-card-title>Current Cash in Machine</mat-card-title>
       <mat-card-content>
-        <span class="current-cash-content">{{currentCashHeld | currency}}</span>
+        <span class="details-content">{{currentCashHeld | currency}}</span>
       </mat-card-content>
   </mat-card>
-  <button class="restock-button" mat-raised-button color="primary" 
+
+  <mat-card class="card-details">
+    <mat-card-title>Credit Card Details</mat-card-title>
+    <mat-card-content>
+      <span class="details-content">{{cardTotal | currency}}</span>
+      <br>
+      <br>
+      <span class="card-history-title">Card Payment History:</span>
+      <br>
+      <span *ngIf="cardLog.length === 0" >No Payments Detected</span>
+      <mat-list class="card-list">
+          <mat-list-item class="card-item" *ngFor="let entry of cardLog">
+            {{entry.paymentTime | date: 'medium'}}:  {{entry.amount | currency}}
+          </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+
+  <button class="restock-button" mat-raised-button color="primary"
     (click)="onRestockClick()">Restock
   </button>
 </div>
