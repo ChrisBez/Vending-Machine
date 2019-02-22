@@ -20,11 +20,10 @@ export class CardPaymentsService {
   }
 
   cardPaymentTotal(): number {
-    const x = this.payments.reduce((sum, current) => sum + current.amount, 0);
+    return this.payments.reduce((sum, current) => sum + current.amount, 0);
+  }
 
-    console.log(x);
-
-    return x;
-
+  resetCardPayments() {
+    this.payments = [];
   }
 }

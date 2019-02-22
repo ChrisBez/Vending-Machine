@@ -13,19 +13,19 @@ export class RepositoryService {
   constructor(private canService: CansService, private heldCashService: HeldCashService, private cardPaymentService:CardPaymentsService) { }
 
   getStock(): Can[] {
-    return this.canService.getCurrentStock()
+    return this.canService.getCurrentStock();
   }
 
   buyCan(canId: number, paymentType: string) {
     this.canService.dispenseCan(canId);
-    
+
     const canCost = this.canService.getPriceOfCan(canId);
 
-    if(paymentType === 'cash') {
+    if (paymentType === 'cash') {
       this.heldCashService.cashPayment(canCost);
     }
 
-    if(paymentType === 'card') {
+    if (paymentType === 'card') {
 
       const newPayment: CardPayment = { paymentTime: new Date(), amount: canCost };
 
@@ -48,6 +48,7 @@ export class RepositoryService {
   restock() {
     this.canService.restockCansWithMockData();
     this.heldCashService.emptyCash();
+    this.cardPaymentService.resetCardPayments();
   }
 
 }
