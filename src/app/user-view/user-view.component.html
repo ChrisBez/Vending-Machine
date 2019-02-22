@@ -20,6 +20,6 @@
         </mat-button-toggle-group>
         </div>
       <button class="purchase-button mat-elevation-z8" mat-raised-button color="primary"
-        (click)="purchaseCan()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
+        (click)="onPurchaseClicked()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
     </mat-card>
   </div>

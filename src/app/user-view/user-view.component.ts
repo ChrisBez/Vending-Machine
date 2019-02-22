@@ -21,16 +21,17 @@ export class UserViewComponent implements OnInit {
     this.canView = this.repoService.getStock();
   }
 
-  purchaseCan() {
+  onPurchaseClicked() {
     this.repoService.buyCan(this.selectedCan, this.paymentType);
-    this.canView = this.repoService.getStock();
     this.resetView();
   }
 
   resetView() {
-    // setting these values to the default will disable the purchase button in the html
+    // setting these values to their defaults will disable the purchase button in the html
     this.selectedCan = 0;
     this.paymentType = '';
+
+    this.canView = this.repoService.getStock();
   }
 
 }
