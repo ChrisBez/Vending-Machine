@@ -1,18 +1,23 @@
 <div class="user-content">
-  <mat-list class="can-list">
-    <mat-list-item class="can-item" *ngFor="let can of canView">
-      {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
-    </mat-list-item>
-  </mat-list>
+  <mat-card class="current-stock mat-elevation-z3">
+    <mat-card-title>Current Stock</mat-card-title>
+    <mat-card-content>
+      <mat-list class="can-list">
+        <mat-list-item class="can-item" *ngFor="let can of canView">
+          {{can.quantity}} X {{can.flavour}}:  {{can.price | currency}}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
 
-  <mat-card class="current-cash">
+  <mat-card class="current-cash mat-elevation-z3">
       <mat-card-title>Current Cash in Machine</mat-card-title>
       <mat-card-content>
         <span class="details-content">{{currentCashHeld | currency}}</span>
       </mat-card-content>
   </mat-card>
 
-  <mat-card class="card-details">
+  <mat-card class="card-details mat-elevation-z3">
     <mat-card-title>Credit Card Details</mat-card-title>
     <mat-card-content>
       <span class="details-content">{{cardTotal | currency}}</span>
@@ -29,7 +34,7 @@
     </mat-card-content>
   </mat-card>
 
-  <button class="restock-button" mat-raised-button color="primary"
+  <button class="restock-button mat-elevation-z8" mat-raised-button color="primary"
     (click)="onRestockClick()">Restock
   </button>
 </div>
