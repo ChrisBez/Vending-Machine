@@ -19,7 +19,6 @@ export class CansService {
   }
 
   dispenseCan(canId: number) {
-    console.log('can purchased');
     this.cans.find(c => c.id === canId).quantity--;
   }
 

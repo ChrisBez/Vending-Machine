@@ -12,7 +12,6 @@ export class CardPaymentsService {
 
   cardPayment(newPayment: CardPayment) {
     this.payments.push(newPayment);
-    console.log(this.cardPaymentTotal());
   }
 
   paymentLog(): CardPayment[] {
