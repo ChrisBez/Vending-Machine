@@ -9,14 +9,16 @@
           </mat-radio-button>
         </ng-container>
       </mat-radio-group>
-      <mat-button-toggle-group class="payment-group" [(ngModel)]="paymentType">
-        <mat-button-toggle value = "cash">
-          Cash
-        </mat-button-toggle>
-        <mat-button-toggle value = "card">
-          Card
-        </mat-button-toggle>
-      </mat-button-toggle-group>
+      <div class="payment-group mat-elevation-z8">
+        <mat-button-toggle-group [(ngModel)]="paymentType">
+          <mat-button-toggle value = "cash">
+            Cash
+          </mat-button-toggle>
+          <mat-button-toggle value = "card">
+            Card
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        </div>
       <button class="purchase-button mat-elevation-z8" mat-raised-button color="primary"
         (click)="purchaseCan()" [disabled]="selectedCan === 0 || paymentType===''">Purchase</button>
     </mat-card>
