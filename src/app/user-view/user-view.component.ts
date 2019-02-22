@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Can } from '../interfaces/can';
 import { RepositoryService } from '../repository/repository.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-user-view',
@@ -15,7 +16,7 @@ export class UserViewComponent implements OnInit {
 
   paymentType = '';
 
-  constructor(private repoService: RepositoryService) { }
+  constructor(private repoService: RepositoryService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.canView = this.repoService.getStock();
@@ -24,6 +25,9 @@ export class UserViewComponent implements OnInit {
   onPurchaseClicked() {
     this.repoService.buyCan(this.selectedCan, this.paymentType);
     this.resetView();
+    this.snackBar.open('Enjoy your drink!', 'Dismiss', {
+      duration: 2000
+    });
   }
 
   resetView() {
