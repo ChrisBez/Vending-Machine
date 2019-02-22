@@ -20,17 +20,16 @@
   <mat-card class="card-details mat-elevation-z3">
     <mat-card-title>Credit Card Details</mat-card-title>
     <mat-card-content>
-      <span class="details-content">{{cardTotal | currency}}</span>
-      <br>
       <br>
       <span class="card-history-title">Card Payment History:</span>
       <br>
-      <span *ngIf="cardLog.length === 0" >No Payments Detected</span>
+      <span *ngIf="cardLog.length === 0">No Payments Detected</span>
       <mat-list class="card-list">
           <mat-list-item class="card-item" *ngFor="let entry of cardLog">
             {{entry.paymentTime | date: 'medium'}}:  {{entry.amount | currency}}
           </mat-list-item>
       </mat-list>
+      <span class="details-content">Total: {{cardTotal | currency}}</span>
     </mat-card-content>
   </mat-card>
 
