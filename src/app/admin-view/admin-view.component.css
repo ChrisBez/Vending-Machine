@@ -16,7 +16,7 @@
 }
 
 .current-cash {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .current-stock {
@@ -24,7 +24,7 @@
 }
 
 .card-details {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .details-content {
@@ -39,5 +39,5 @@
 
 .restock-button {
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 10px;
 }
