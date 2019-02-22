@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 import { Can } from '../interfaces/can';
 import { RepositoryService } from '../repository/repository.service';
 import { CardPayment } from '../interfaces/card-payment';
@@ -15,7 +16,7 @@ export class AdminViewComponent implements OnInit {
   cardTotal = 0;
   currentCashHeld = 0;
 
-  constructor(private repoService: RepositoryService) { }
+  constructor(private repoService: RepositoryService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.refreshView();
@@ -24,6 +25,9 @@ export class AdminViewComponent implements OnInit {
   onRestockClick() {
     this.repoService.restock();
     this.refreshView();
+    this.snackBar.open('Vending Machine Restocked', 'Dismiss', {
+      duration: 2000
+    });
   }
 
   refreshView() {
