@@ -16,7 +16,7 @@ export class CardPaymentsService {
   }
 
   paymentLog(): CardPayment[] {
-    return [...this.payments];
+    return JSON.parse(JSON.stringify(this.payments));
   }
 
   cardPaymentTotal(): number {
