@@ -18,6 +18,20 @@ describe('CansService', () => {
     expect(CANS).toEqual(service.getCurrentStock());
   });
 
+  it('should return the correct price for a can when getPriceOfCan is called', () => {
+    const service: CansService = TestBed.get(CansService);
+
+    const initialCans: Can[] = [
+      {id: 1, flavour: 'Soda Water', price: 1.50, quantity: 5}
+
+    ];
+
+    service.restockCans(initialCans);
+
+    expect(service.getPriceOfCan(1)).toEqual(1.5);
+  });
+
+
   it('should decrement the quantity of a can when a purchase is made', () => {
     const service: CansService = TestBed.get(CansService);
 
@@ -50,5 +64,15 @@ describe('CansService', () => {
     expect(service.getCurrentStock()).toEqual(finalCans);
 
   } );
+
+  it('should reset to CANS when restockCansWithMockData is called', () => {
+    const service: CansService = TestBed.get(CansService);
+
+    service.dispenseCan(2);
+    service.dispenseCan(3);
+    service.restockCansWithMockData();
+
+    expect(service.getCurrentStock()).toEqual(CANS);
+  });
 
 });

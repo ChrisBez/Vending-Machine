@@ -38,4 +38,17 @@ describe('CardPaymentsService', () => {
     expect(service.cardPaymentTotal()).toEqual(5);
   });
 
+  it('should clear history when reset card payments is called', () => {
+    const service: CardPaymentsService = TestBed.get(CardPaymentsService);
+
+    service.cardPayment({ paymentTime: new Date('2010-01-01'), amount: 1 });
+    service.cardPayment({ paymentTime: new Date('2011-01-01'), amount: 1.5 });
+    service.cardPayment({ paymentTime: new Date('2012-01-01'), amount: 2.5 });
+
+    service.resetCardPayments();
+
+    expect(service.paymentLog()).toEqual([]);
+    expect(service.cardPaymentTotal()).toEqual(0);
+  });
+
 });

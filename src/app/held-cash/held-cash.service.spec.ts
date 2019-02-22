@@ -24,5 +24,15 @@ describe('HeldCashService', () => {
     expect(service.heldCash).toEqual(3);
   });
 
+  it('should be hold $0 after emptyCash called', () => {
+    const service: HeldCashService = TestBed.get(HeldCashService);
+
+    service.cashPayment(1);
+    service.cashPayment(1.1);
+
+    service.emptyCash();
+
+    expect(service.heldCash).toEqual(0);
+  });
 
 });
