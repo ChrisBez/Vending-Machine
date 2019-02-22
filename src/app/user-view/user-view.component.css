@@ -5,6 +5,14 @@
     flex-direction: column;
 }
 
+.mat-card {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .can-group {
     display: inline-flex;
     flex-direction: column;
